@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+}
+
+.floor {
+  width: 25%;
+  height: 25vh;
+  border: 2px solid black;
+  margin: auto;
+}
+
+.lift {
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+  position: relative;
+  transition: transform 1s;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  gap: 1rem;
+}
+
+button {
+  height: 5rem;
+  width: 5rem;
+  border: 2px solid blue;
+}
