@@ -3,25 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Lift Simulation</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container">
-      <div class="floor floor4">4 Floor</div>
-      <div class="floor floor3">3 Floor</div>
-      <div class="floor floor2">2 Floor</div>
-      <div class="floor floor1">
-        <div class="lift"></div>
+      <div class="btn-container">
+        <button class="btn btn4">1</button>
+        <button class="btn btn3">2</button>
+        <button class="btn btn2">3</button>
+        <button class="btn btn1">4</button>
       </div>
-      <div class="button-container">
-        <button class="btn1">1</button>
-        <button class="btn2">2</button>
-        <button class="btn3">3</button>
-        <button class="btn4">4</button>
+      <div class="floor-container">
+        <img
+          src="vecteezy_skyscraper-city-buildings-clipart-design-illustration_9391135.png"
+          alt="Building"
+        />
+        <div class="floors">
+          <div class="floor floor4"></div>
+          <div class="floor floor3"></div>
+          <div class="floor floor2"></div>
+          <div class="floor floor1">
+            <div class="lift">
+              <div class="door door-left open-left"></div>
+              <div class="door door-right open-right"></div>
+              <span class="welcome-message"></span>
+            </div>
+          </div>
+        </div>
+        <img
+          src="vecteezy_skyscraper-city-buildings-clipart-design-illustration_9391135.png"
+          alt="Building"
+        />
       </div>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>

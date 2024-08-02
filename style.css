@@ -4,38 +4,132 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+}
+
 .container {
-  display: grid;
   height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+}
+
+.btn-container {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  height: 5rem; 
+  width: 5rem; 
+  border: none;
+  color: black;
+  background: linear-gradient(135deg, #ff0066, #ffcc00);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.floor-container {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  position: relative;
+}
+
+.floor-container img {
+  height: 100vh;
+  width: 27%;
+  background-color: black;
+  z-index: 1;
+}
+
+.floors {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
 }
 
 .floor {
-  width: 25%;
-  height: 25vh;
-  border: 2px solid black;
-  margin: auto;
+  height: 25%;
+  width: 100%;
+  border: 4px solid;
+  border-image: linear-gradient(135deg, #ff0066, #ffcc00) 1;
+  position: relative;
 }
 
 .lift {
   height: 100%;
   width: 100%;
-  background-color: aqua;
+  background-color: aquamarine;
   position: relative;
-  transition: transform 1s;
-}
-
-.button-container {
+  transition: transform 1.5s ease-in-out;
   display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
-  height: 5rem;
-  width: 5rem;
-  border: 2px solid blue;
+.door {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(190deg, #ff0066, #ffcc00);
+  transition: transform 1s ease-in-out;
+}
+
+.door-left {
+  left: 0;
+  transform: translateX(0);
+}
+
+.door-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.open-left {
+  transform: translateX(-100%);
+}
+
+.open-right {
+  transform: translateX(100%);
+}
+
+.welcome-message {
+  text-align: center;
+  margin: auto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 1400px) {
+  .btn {
+    height: 6.5rem;
+    width: 6.5rem;
+    font-size: 1.8rem;
+  }
+
+  .btn-container {
+    gap: 3rem;
+  }
 }
